@@ -22,11 +22,11 @@ public class CalcView implements ActionListener{
 	
     JButton cButton 	= new JButton("CL");
     JButton del			= new JButton("Del");
-    JButton multButton = new JButton("×");
-    JButton divButton  = new JButton("÷");
+    JButton multButton = new JButton("Ã—");
+    JButton divButton  = new JButton("Ã·");
     JButton addButton  = new JButton("+");
     JButton subButton  = new JButton("-");
-    JButton PosNeg = new JButton("±");
+    JButton PosNeg = new JButton("Â±");
     JButton decimal = new JButton(".");
     JButton eq = new JButton("=");
     private final JTextArea display = new JTextArea(2,20);
