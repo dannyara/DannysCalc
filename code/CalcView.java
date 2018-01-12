@@ -21,8 +21,8 @@ public class CalcView implements ActionListener{
 	JPanel _screenPanel;
 	JButton[] button = new JButton[10];
 	
-    JButton cButton    = new JButton("CL");
-    JButton del		= new JButton("Del");
+    JButton cButton 	= new JButton("CL");
+    JButton del			= new JButton("Del");
     JButton multButton = new JButton("×");
     JButton divButton  = new JButton("÷");
     JButton addButton  = new JButton("+");
@@ -153,8 +153,8 @@ public class CalcView implements ActionListener{
 		_view.setResizable(false);
 		setDesign();
 		_view.setFocusable(true);
-		// _numPanel.getInputMap().put(KeyStroke.getKeyStroke("W"),"forward");
 		
+		// _numPanel.getInputMap().put(KeyStroke.getKeyStroke("W"),"forward");
 		
 		_view.pack();
 		_view.setVisible(true);
@@ -258,6 +258,7 @@ public class CalcView implements ActionListener{
 		inMap.put(KeyStroke.getKeyStroke(keyCode, 0,false), id );
 		
 		actMap.put(id, new AbstractAction(){
+			private static final long serialVersionUID = 1L; //added 1/12/18
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -353,7 +354,4 @@ public class CalcView implements ActionListener{
         } catch(Exception e) {   
         }
     }
-
-
-	
 }
