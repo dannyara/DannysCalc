@@ -7,10 +7,10 @@ private static char operation;
 public static int val1, val2;
 	public static void main(String[] args) {
 		
-		boolean check = true;
+		boolean resetCalc = true;
 		System.out.println("Welcome to Terminal Calculator!");
 		
-		while(check == true){
+		while(resetCalc == true){
 				
 			Scanner keyboardInput = new Scanner(System.in);	
 			System.out.println("Enter equation below (use spaces)");
@@ -31,6 +31,7 @@ public static int val1, val2;
 			}
 			String equation = val1 + " " + operation + " "+ val2 + " = ";
 			System.out.print(equation);
+			
 			
 			switch (operation){
 			
@@ -62,11 +63,11 @@ public static int val1, val2;
 		Scanner reset=new Scanner(System.in);
 		System.out.println("Want to reset? \n" +" y/n ");
 		try{
-			if(reset.next().equals("y")) check=true;
+			if(reset.next().equals("y")) resetCalc=true;
 			else{ 
 				keyboardInput.close();
 				reset.close();
-				check = false;
+				resetCalc = false;
 			}
 		}catch (Exception e){
 			
@@ -82,5 +83,6 @@ public static int val1, val2;
 		return ((double)x/y);	
 	}
 	
+
 }
 
